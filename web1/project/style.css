@@ -9,29 +9,12 @@
     width: 10svh;
     height: 10svh;
     margin-right: 15px;
-}
 
-header {
-    /* height: 10svh; */
 }
 
 header h1 {
     font-size: 5svh;
     height: 10svh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 10px;
-}
-
-.flex-box_container {
-    clear: both;
-    width: 100%;
-   max-width: 960px;
-    margin: 0 auto;
-    margin-top: 1%;
-    display: flex;
-    flex-direction: column;
 }
 
 body{
@@ -43,8 +26,10 @@ body{
    margin: 0;
    background-color: rgb(70, 174, 167);
    margin-top: 10px;
-
+   transform: translateX(-10svh);
  }
+
+
  .page-nav ul{
     display: flex;
     flex-direction: column;
@@ -67,16 +52,17 @@ body{
     margin: 10px 0px;
  }
 
+#content {
+    max-width: 960px;
+}
+
  div {
    margin: 0;
    max-width: 100%;
  }
-div heads{
-   max-width: 100%;
-}
+
  .link  {
   margin: 0 auto;
-  order: 2;
   }
  li{
   margin:0px auto;
@@ -93,9 +79,9 @@ div heads{
  a:hover{
      text-decoration: underline;
  }
+
  .table{
     margin: auto;
-    order: 1;
  }
  th, td{
      border: 1px solid black;
@@ -104,7 +90,6 @@ div heads{
   margin: 0 auto;
   padding:0 auto;
   align-items: center;
-  order: 3;
  }
  input, select, textarea{
      outline: none;
@@ -135,7 +120,6 @@ border: 5px solid #000000;
      clear: both;
    }
    .header_cont div {
-     display: inline-block;
      padding: 25px 0 0 10px;
    }
  .container{
@@ -147,29 +131,17 @@ border: 5px solid #000000;
  .footer{
      background-color: rgb(100, 100, 167);
  }
- @media screen and (orientation: landscape){
-    #heads{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+ @media screen and (width>= 576px){
 
-    header{
-        display: flex;
-    }
     .page-nav{
-        order: -1;
         margin-top: 0;
-        display: flex;
-        justify-content: flex-end;
-        float: right;
+        transform: translateX(0);
     }
     .page-nav ul{
-        flex-direction: row !important;
         margin: unset;
     }
     header h1{
-        justify-content: start;
         height: 100%;
     }
+
  }
